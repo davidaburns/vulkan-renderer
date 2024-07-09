@@ -1,0 +1,126 @@
+# Build artifacts
+build/
+bin/
+obj/
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.dylib
+*.class
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+
+# Premake generated files
+*.make
+*.workspace
+*.project
+Makefile
+makefile
+*.makefile
+*.vcxproj*
+*.sln
+
+# MacOS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Compiled Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Static libraries
+*.lib
+*.a
+
+# Compiled object files
+*.lo
+*.la
+*.al
+*.o
+*.obj
+*.gch
+*.pch
+
+# Compiled Static libraries
+*.lib
+*.a
+*.lai
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.mod
+
+# Debug dump files
+*.dmp
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS-specific
+*.swp
+*.swo
+*.swn
+
+# Backup files
+*~
+*.bak
+*.orig
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# Directory files
+*.directory
+
+# Backup directories
+# NOTE: if you use a centralized code repository that generates this folder, comment out this line
+*.bak/
+
+# GitHub Actions
+.github/

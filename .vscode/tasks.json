@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build debug",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && ./build.sh debug",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the project in debug mode"
+        },
+        {
+            "label": "build release",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && ./build.sh release",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the project in release mode"
+        }
+    ]
+}

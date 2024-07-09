@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "initializer_list": "cpp",
+        "iostream": "cpp"
+    },
+	"C_Cpp.clang_format_fallbackStyle": "Google", // Optional: Set fallback style
+    "C_Cpp.clang_format_style": "file", // Use .clang-format file in the project
+    "editor.formatOnSave": true, // Format on save for all files
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
+}
