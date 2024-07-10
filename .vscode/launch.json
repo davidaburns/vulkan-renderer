@@ -6,7 +6,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"cwd": "${workspaceFolder}",
-			"program": "${workspaceRoot}/bin/debug/cpp-learning",
+			"program": "${workspaceRoot}/build/bin/debug/vkrend",
 			"MIMode": "lldb",
 			"preLaunchTask": "build debug",
 			"externalConsole": true,
@@ -16,7 +16,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"cwd": "${workspaceFolder}",
-			"program": "${workspaceRoot}/bin/release/cpp-learning",
+			"program": "${workspaceRoot}/build/bin/release/vkrend",
 			"MIMode": "lldb",
 			"preLaunchTask": "build release",
 			"externalConsole": true

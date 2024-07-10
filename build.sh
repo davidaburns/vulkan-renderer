@@ -8,26 +8,8 @@ TARGET_DIR="bin"
 
 # Function to clean object files and intermediate build artifacts
 clean() {
-	local config = "$1"
-	echo $config
-    echo "Cleaning old object files and intermediate build artifacts..."
-    find "$BUILD_DIR" -type f -name '*.o' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.obj' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.a' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.lib' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.dll' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.so' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.dylib' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.exe' -delete 2>/dev/null
-    find "$BUILD_DIR" -type f -name '*.d' -delete 2>/dev/null
-
-    if [ -d "$BUILD_DIR" ]; then
-        find "$BUILD_DIR" -type d -exec rm -rf {} +
-    fi
-
-    if [ -d "$TARGET_DIR" ]; then
-        find "$TARGET_DIR" -type d -exec rm -rf {} +
-    fi
+	echo "Cleaning old object files and intermediate build artifacts..."
+	make clean
 }
 
 # Function to generate build files with Premake
@@ -40,8 +22,7 @@ generate_build_files() {
 build() {
     CONFIG=${1:-debug}
     echo "Building the project with configuration: $CONFIG"
-    cd "$BUILD_DIR" || exit
-    make config="$CONFIG"
+    make all config="$CONFIG" VERBOSE=1
 }
 
 # Main script logic
@@ -49,11 +30,9 @@ if [ "$1" == "clean" ]; then
     clean
     exit 0
 elif [ "$1" == "debug" ] || [ "$1" == "release" ]; then
-    clean
     generate_build_files
     build "$1"
 else
-    clean
     generate_build_files
     build "debug"
 fi
