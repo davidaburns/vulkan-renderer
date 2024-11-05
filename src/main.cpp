@@ -103,12 +103,14 @@ private:
         createInfo.pApplicationInfo = &appInfo;
         createInfo.enabledExtensionCount =
             static_cast<uint32_t>(extensions.size());
+
         createInfo.ppEnabledExtensionNames = extensions.data();
         createInfo.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
 
         if (validationLayersEnabled) {
             createInfo.enabledLayerCount =
                 static_cast<uint32_t>(validationLayers.size());
+
             createInfo.ppEnabledLayerNames = validationLayers.data();
         } else {
             createInfo.enabledLayerCount = 0;
@@ -160,6 +162,7 @@ private:
         requiredExtensions.emplace_back(
             VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME
         );
+
         if (validationLayersEnabled) {
             requiredExtensions.emplace_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
         }
